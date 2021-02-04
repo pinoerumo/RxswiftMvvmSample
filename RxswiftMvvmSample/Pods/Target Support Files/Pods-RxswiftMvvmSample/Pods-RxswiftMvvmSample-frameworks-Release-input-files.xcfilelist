@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-RxswiftMvvmSample/Pods-RxswiftMvvmSample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Himotoki/Himotoki.framework
 ${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework

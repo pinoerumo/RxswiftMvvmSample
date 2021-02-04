@@ -11,6 +11,7 @@ target 'RxswiftMvvmSample' do
   pod 'RxCocoa'
   pod 'PKHUD', '~> 5.0'
   pod "Himotoki", "~> 3.1"
+  pod 'Alamofire', '~> 5.2'
 
   target 'RxswiftMvvmSampleTests' do
     inherit! :search_paths

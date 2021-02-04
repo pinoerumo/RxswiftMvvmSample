@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.1)
   - Himotoki (3.2.0)
   - PKHUD (5.3.0)
   - RxCocoa (6.0.0):
@@ -9,6 +10,7 @@ PODS:
   - RxSwift (6.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Himotoki (~> 3.1)
   - PKHUD (~> 5.0)
   - RxCocoa
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Himotoki
     - PKHUD
     - RxCocoa
@@ -23,12 +26,13 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Himotoki: 2618fc6b939ad6d9b71c52c90fe210f54ea28167
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
 
-PODFILE CHECKSUM: 84fd4e3d1359c382f3bba99ce17ccc04411f6a6b
+PODFILE CHECKSUM: 969cd82ae6dd525df37bdf2fc8ee552117a2a006
 
 COCOAPODS: 1.10.0
