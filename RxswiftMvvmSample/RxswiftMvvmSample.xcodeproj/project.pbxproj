@@ -17,6 +17,18 @@
 		EF8AAB1925CC29DC003C4CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8AAB1725CC29DC003C4CBE /* LaunchScreen.storyboard */; };
 		EF8AAB2425CC29DC003C4CBE /* RxswiftMvvmSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AAB2325CC29DC003C4CBE /* RxswiftMvvmSampleTests.swift */; };
 		EF8AAB2F25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AAB2E25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift */; };
+		EF8D3AE025D2E0C700E7B380 /* Condensation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3ADF25D2E0C700E7B380 /* Condensation.swift */; };
+		EF8D3AE125D2E0C700E7B380 /* Condensation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3ADF25D2E0C700E7B380 /* Condensation.swift */; };
+		EF8D3AE225D2E0C700E7B380 /* Condensation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3ADF25D2E0C700E7B380 /* Condensation.swift */; };
+		EF8D3B2925D50CC900E7B380 /* sessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B2825D50CC900E7B380 /* sessionManager.swift */; };
+		EF8D3B2A25D50CC900E7B380 /* sessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B2825D50CC900E7B380 /* sessionManager.swift */; };
+		EF8D3B2B25D50CC900E7B380 /* sessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B2825D50CC900E7B380 /* sessionManager.swift */; };
+		EF8D3B3525D50D8D00E7B380 /* Shorten.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3425D50D8D00E7B380 /* Shorten.swift */; };
+		EF8D3B3625D50D8D00E7B380 /* Shorten.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3425D50D8D00E7B380 /* Shorten.swift */; };
+		EF8D3B3725D50D8D00E7B380 /* Shorten.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3425D50D8D00E7B380 /* Shorten.swift */; };
+		EF8D3B3F25D50E6E00E7B380 /* BitlyBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3E25D50E6E00E7B380 /* BitlyBase.swift */; };
+		EF8D3B4025D50E6E00E7B380 /* BitlyBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3E25D50E6E00E7B380 /* BitlyBase.swift */; };
+		EF8D3B4125D50E6E00E7B380 /* BitlyBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D3B3E25D50E6E00E7B380 /* BitlyBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +71,10 @@
 		EF8AAB2A25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxswiftMvvmSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8AAB2E25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxswiftMvvmSampleUITests.swift; sourceTree = "<group>"; };
 		EF8AAB3025CC29DC003C4CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8D3ADF25D2E0C700E7B380 /* Condensation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condensation.swift; sourceTree = "<group>"; };
+		EF8D3B2825D50CC900E7B380 /* sessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionManager.swift; sourceTree = "<group>"; };
+		EF8D3B3425D50D8D00E7B380 /* Shorten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shorten.swift; sourceTree = "<group>"; };
+		EF8D3B3E25D50E6E00E7B380 /* BitlyBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitlyBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +201,44 @@
 		EF8AAB3E25CC2C90003C4CBE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EF8D3ADE25D2E07000E7B380 /* Entity */,
+				EF8D3ACC25D2DA2E00E7B380 /* API */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		EF8D3ACC25D2DA2E00E7B380 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D3B2F25D50D1900E7B380 /* Bitly */,
+				EF8D3AE925D2E3EC00E7B380 /* Base */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EF8D3ADE25D2E07000E7B380 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D3ADF25D2E0C700E7B380 /* Condensation.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EF8D3AE925D2E3EC00E7B380 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D3B2825D50CC900E7B380 /* sessionManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EF8D3B2F25D50D1900E7B380 /* Bitly */ = {
+			isa = PBXGroup;
+			children = (
+				EF8D3B3425D50D8D00E7B380 /* Shorten.swift */,
+				EF8D3B3E25D50E6E00E7B380 /* BitlyBase.swift */,
+			);
+			path = Bitly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,7 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8AAB0D25CC29D9003C4CBE /* AppDelegate.swift in Sources */,
+				EF8D3B3525D50D8D00E7B380 /* Shorten.swift in Sources */,
 				EF8AAB0F25CC29D9003C4CBE /* SceneDelegate.swift in Sources */,
+				EF8D3B3F25D50E6E00E7B380 /* BitlyBase.swift in Sources */,
+				EF8D3B2925D50CC900E7B380 /* sessionManager.swift in Sources */,
+				EF8D3AE025D2E0C700E7B380 /* Condensation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +493,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8D3AE125D2E0C700E7B380 /* Condensation.swift in Sources */,
 				EF8AAB2425CC29DC003C4CBE /* RxswiftMvvmSampleTests.swift in Sources */,
+				EF8D3B2A25D50CC900E7B380 /* sessionManager.swift in Sources */,
+				EF8D3B3625D50D8D00E7B380 /* Shorten.swift in Sources */,
+				EF8D3B4025D50E6E00E7B380 /* BitlyBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +505,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8D3AE225D2E0C700E7B380 /* Condensation.swift in Sources */,
 				EF8AAB2F25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift in Sources */,
+				EF8D3B2B25D50CC900E7B380 /* sessionManager.swift in Sources */,
+				EF8D3B3725D50D8D00E7B380 /* Shorten.swift in Sources */,
+				EF8D3B4125D50E6E00E7B380 /* BitlyBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
