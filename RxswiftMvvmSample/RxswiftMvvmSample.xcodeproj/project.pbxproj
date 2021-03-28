@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C036BA625F5584200E0E501 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BA525F5584200E0E501 /* Keys.swift */; };
+		0C036BA725F5584200E0E501 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BA525F5584200E0E501 /* Keys.swift */; };
+		0C036BA825F5584200E0E501 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BA525F5584200E0E501 /* Keys.swift */; };
+		0C036BAE25F5680F00E0E501 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BAD25F5680F00E0E501 /* DataManager.swift */; };
+		0C036BAF25F5680F00E0E501 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BAD25F5680F00E0E501 /* DataManager.swift */; };
+		0C036BB025F5680F00E0E501 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C036BAD25F5680F00E0E501 /* DataManager.swift */; };
 		721691A124F13BAA9C0C8111 /* Pods_RxswiftMvvmSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */; };
 		7A9E7385FAAE04CFA6ADCA5B /* Pods_RxswiftMvvmSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D890EB783AC40511A35B8 /* Pods_RxswiftMvvmSample.framework */; };
 		7E5A658496F219C80627CE84 /* Pods_RxswiftMvvmSample_RxswiftMvvmSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1887770A9BEFDC7D44C1649 /* Pods_RxswiftMvvmSample_RxswiftMvvmSampleUITests.framework */; };
@@ -49,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C036BA525F5584200E0E501 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		0C036BAD25F5680F00E0E501 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		103AE0D57C9363F732ACCDB4 /* Pods-RxswiftMvvmSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxswiftMvvmSample.debug.xcconfig"; path = "Target Support Files/Pods-RxswiftMvvmSample/Pods-RxswiftMvvmSample.debug.xcconfig"; sourceTree = "<group>"; };
 		2208407C764AFF57781F5CDE /* Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig"; path = "Target Support Files/Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests/Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxswiftMvvmSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +121,16 @@
 				6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CE2C7EC260652380035EDA0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0C036BAD25F5680F00E0E501 /* DataManager.swift */,
+				0C036BA525F5584200E0E501 /* Keys.swift */,
+				EF8D3ACC25D2DA2E00E7B380 /* APIs */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		DFD41327DDD8B88B43052B69 /* Pods */ = {
@@ -201,19 +219,19 @@
 		EF8AAB3E25CC2C90003C4CBE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0CE2C7EC260652380035EDA0 /* Service */,
 				EF8D3ADE25D2E07000E7B380 /* Entity */,
-				EF8D3ACC25D2DA2E00E7B380 /* API */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		EF8D3ACC25D2DA2E00E7B380 /* API */ = {
+		EF8D3ACC25D2DA2E00E7B380 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
 				EF8D3B2F25D50D1900E7B380 /* Bitly */,
 				EF8D3AE925D2E3EC00E7B380 /* Base */,
 			);
-			path = API;
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		EF8D3ADE25D2E07000E7B380 /* Entity */ = {
@@ -481,9 +499,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8AAB0D25CC29D9003C4CBE /* AppDelegate.swift in Sources */,
+				0C036BAE25F5680F00E0E501 /* DataManager.swift in Sources */,
 				EF8D3B3525D50D8D00E7B380 /* Shorten.swift in Sources */,
 				EF8AAB0F25CC29D9003C4CBE /* SceneDelegate.swift in Sources */,
 				EF8D3B3F25D50E6E00E7B380 /* BitlyBase.swift in Sources */,
+				0C036BA625F5584200E0E501 /* Keys.swift in Sources */,
 				EF8D3B2925D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3AE025D2E0C700E7B380 /* Condensation.swift in Sources */,
 			);
@@ -494,7 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8D3AE125D2E0C700E7B380 /* Condensation.swift in Sources */,
+				0C036BA725F5584200E0E501 /* Keys.swift in Sources */,
 				EF8AAB2425CC29DC003C4CBE /* RxswiftMvvmSampleTests.swift in Sources */,
+				0C036BAF25F5680F00E0E501 /* DataManager.swift in Sources */,
 				EF8D3B2A25D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3B3625D50D8D00E7B380 /* Shorten.swift in Sources */,
 				EF8D3B4025D50E6E00E7B380 /* BitlyBase.swift in Sources */,
@@ -506,7 +528,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8D3AE225D2E0C700E7B380 /* Condensation.swift in Sources */,
+				0C036BA825F5584200E0E501 /* Keys.swift in Sources */,
 				EF8AAB2F25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift in Sources */,
+				0C036BB025F5680F00E0E501 /* DataManager.swift in Sources */,
 				EF8D3B2B25D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3B3725D50D8D00E7B380 /* Shorten.swift in Sources */,
 				EF8D3B4125D50E6E00E7B380 /* BitlyBase.swift in Sources */,
