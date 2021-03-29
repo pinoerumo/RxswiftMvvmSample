@@ -15,8 +15,7 @@ class DataManager {
     
     enum shortenResult {
         case success(_ res: Condensation)
-        case notHttp(_ message: String)
-        case otherError
+        case otherError(_ message: String)
     }
     
     static func getShortUrl(url:String, completionHandler: ((_ result: shortenResult)->Void)?) {
@@ -29,10 +28,9 @@ class DataManager {
                 case .next(let res):
                     result = .success(res)
                     completionHandler!(result)
-                    break
-                case .error( _):
-                    print(event)
-                    break
+                case .error(let mes):
+                    result = .otherError(mes.localizedDescription)
+                    completionHandler!(result)
                 default: break
                 }
             }.disposed(by: disposeBag)
