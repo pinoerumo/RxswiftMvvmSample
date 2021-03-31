@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CBDFD1C2612326400ED0637 /* ShortenViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBDFD1B2612326400ED0637 /* ShortenViewModels.swift */; };
+		0CBDFD1D2612326400ED0637 /* ShortenViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBDFD1B2612326400ED0637 /* ShortenViewModels.swift */; };
+		0CBDFD1E2612326400ED0637 /* ShortenViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBDFD1B2612326400ED0637 /* ShortenViewModels.swift */; };
 		721691A124F13BAA9C0C8111 /* Pods_RxswiftMvvmSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */; };
 		7A9E7385FAAE04CFA6ADCA5B /* Pods_RxswiftMvvmSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D890EB783AC40511A35B8 /* Pods_RxswiftMvvmSample.framework */; };
 		7E5A658496F219C80627CE84 /* Pods_RxswiftMvvmSample_RxswiftMvvmSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1887770A9BEFDC7D44C1649 /* Pods_RxswiftMvvmSample_RxswiftMvvmSampleUITests.framework */; };
@@ -49,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CBDFD1B2612326400ED0637 /* ShortenViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenViewModels.swift; sourceTree = "<group>"; };
 		103AE0D57C9363F732ACCDB4 /* Pods-RxswiftMvvmSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxswiftMvvmSample.debug.xcconfig"; path = "Target Support Files/Pods-RxswiftMvvmSample/Pods-RxswiftMvvmSample.debug.xcconfig"; sourceTree = "<group>"; };
 		2208407C764AFF57781F5CDE /* Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig"; path = "Target Support Files/Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests/Pods-RxswiftMvvmSample-RxswiftMvvmSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxswiftMvvmSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,36 @@
 				6F85FDCAE69C301F0669E414 /* Pods_RxswiftMvvmSampleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CBDFD172612319200ED0637 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0CBDFD18261231A100ED0637 /* shorten */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		0CBDFD18261231A100ED0637 /* shorten */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shorten;
+			sourceTree = "<group>";
+		};
+		0CBDFD19261231B600ED0637 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0CBDFD1B2612326400ED0637 /* ShortenViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0CBDFD1A261231C400ED0637 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DFD41327DDD8B88B43052B69 /* Pods */ = {
@@ -201,6 +235,9 @@
 		EF8AAB3E25CC2C90003C4CBE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0CBDFD172612319200ED0637 /* Screen */,
+				0CBDFD19261231B600ED0637 /* ViewModels */,
+				0CBDFD1A261231C400ED0637 /* Models */,
 				EF8D3ADE25D2E07000E7B380 /* Entity */,
 				EF8D3ACC25D2DA2E00E7B380 /* API */,
 			);
@@ -484,6 +521,7 @@
 				EF8D3B3525D50D8D00E7B380 /* Shorten.swift in Sources */,
 				EF8AAB0F25CC29D9003C4CBE /* SceneDelegate.swift in Sources */,
 				EF8D3B3F25D50E6E00E7B380 /* BitlyBase.swift in Sources */,
+				0CBDFD1C2612326400ED0637 /* ShortenViewModels.swift in Sources */,
 				EF8D3B2925D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3AE025D2E0C700E7B380 /* Condensation.swift in Sources */,
 			);
@@ -497,6 +535,7 @@
 				EF8AAB2425CC29DC003C4CBE /* RxswiftMvvmSampleTests.swift in Sources */,
 				EF8D3B2A25D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3B3625D50D8D00E7B380 /* Shorten.swift in Sources */,
+				0CBDFD1D2612326400ED0637 /* ShortenViewModels.swift in Sources */,
 				EF8D3B4025D50E6E00E7B380 /* BitlyBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +548,7 @@
 				EF8AAB2F25CC29DC003C4CBE /* RxswiftMvvmSampleUITests.swift in Sources */,
 				EF8D3B2B25D50CC900E7B380 /* sessionManager.swift in Sources */,
 				EF8D3B3725D50D8D00E7B380 /* Shorten.swift in Sources */,
+				0CBDFD1E2612326400ED0637 /* ShortenViewModels.swift in Sources */,
 				EF8D3B4125D50E6E00E7B380 /* BitlyBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
