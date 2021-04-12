@@ -24,7 +24,7 @@ struct ShortenRequest: BitlyRequest {
         return Keys.groupId
     }
     
-    typealias Response = Condensation
+    typealias Response = GetShortenResponse
     
     var path: String {
         return "shorten"
@@ -48,8 +48,28 @@ struct ShortenRequest: BitlyRequest {
         ]
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> ShortenRequest.Response {
-        return try decodeValue(object)
+    
+    final class GetShortenResponse: Himotoki.Decodable {
+
+        let condensation: Condensation
+        
+        init(_ e: Extractor) throws {
+            let errorResponse = try BitlyError(e)
+            
+            guard let message = errorResponse.message else {
+                do {
+                    self.condensation = try Condensation.decode(e)
+                    return
+                } catch {
+                    throw BitlyErrorCase.parseError
+                }
+            }
+            throw BitlyErrorCase.bitlyAPIError(message: message)
+        }
+        
+        static func decode(_ e: Extractor) throws -> GetShortenResponse {
+            return try GetShortenResponse(e)
+        }
     }
 }
 

@@ -50,13 +50,19 @@ class RxswiftMvvmSampleTests: XCTestCase {
     func test_短縮化成功テスト() {
         let imageDownloadExpectation: XCTestExpectation?
             = self.expectation(description: "success")
-        DataManager.getShortUrl(url: "https://dev.bitly.com") { (result) in
+        DataManager.shared.getShortUrl(url: "https://dev.bitly.com") { (result,error) in
             switch result {
             case .success(let shorten):
+                print("--------response---------")
                 print(shorten)
+                print("--------response---------")
                 imageDownloadExpectation?.fulfill()
             case .otherError:
                 XCTFail()
+            case .none:
+                break
+            case .some(.apiError):
+                break
             }
         }
         self.waitForExpectations(timeout: 2, handler: nil)
@@ -65,13 +71,19 @@ class RxswiftMvvmSampleTests: XCTestCase {
     func test_短縮化失敗（URL不正）テスト() {
         let imageDownloadExpectation: XCTestExpectation?
             = self.expectation(description: "success")
-        DataManager.getShortUrl(url: "hps://dev.bitly.com") { (result) in
+        DataManager.shared.getShortUrl(url: "hps://dev.bitly.com") { (result,error)  in
+            
+            print(error)
             switch result {
-            case .success:
-                XCTFail()
-            case .otherError(let mes):
-                print(mes)
+            case .success(let shorten):
+                print(shorten)
                 imageDownloadExpectation?.fulfill()
+            case .otherError:
+                XCTFail()
+            case .none:
+                break
+            case .some(.apiError):
+                break
             }
         }
         self.waitForExpectations(timeout: 2, handler: nil)

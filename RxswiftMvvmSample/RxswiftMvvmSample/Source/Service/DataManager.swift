@@ -11,28 +11,44 @@ import RxSwift
 import APIKit
 
 class DataManager {
-    static let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
+    
+    static let shared = DataManager()
     
     enum shortenResult {
         case success(_ res: Condensation)
-        case otherError(_ message: String)
+        case apiError
+        case otherError
     }
     
-    static func getShortUrl(url:String, completionHandler: ((_ result: shortenResult)->Void)?) {
+    func getShortUrl(url:String, completionHandler: ((_ result: shortenResult?,BitlyErrorCase?)->Void)?) {
         let shorten = ShortenRequest(long_url: url)
         Session.rx_sendRequest(request: shorten)
-            .subscribe {
-                event in
-                var result: shortenResult
-                switch event {
-                case .next(let res):
-                    result = .success(res)
-                    completionHandler!(result)
-                case .error(let mes):
-                    result = .otherError(mes.localizedDescription)
-                    completionHandler!(result)
-                default: break
-                }
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { (response) in
+                completionHandler!(.success(response.condensation), nil)
+            }, onError: { (error) in
+                completionHandler!(nil, self.convertError(error: error))
+            }, onCompleted: nil, onDisposed: nil)
+            .disposed(by: disposeBag)
+    }
+    
+    func convertError(error : Error?) -> BitlyErrorCase {
+        
+        let returnError: BitlyErrorCase
+        
+        if let sessionError = error as? BitlyErrorCase {
+            switch sessionError {
+            
+            case .bitlyAPIError(message: let mes):
+                returnError = .bitlyAPIError(message: mes)
+            case .parseError:
+                returnError = .parseError
+            default:
+                returnError = .otherError
+            }
+        } else {
+            returnError = .otherError
+        }
+        return returnError
     }
 }
